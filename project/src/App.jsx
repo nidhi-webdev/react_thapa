@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div>
       <div>
-        <img src='https://images3.alphacoders.com/130/thumb-1920-1306841.jpg' className='w-full h-200' />
+        <img src='https://images3.alphacoders.com/130/thumb-1920-1306841.jpg' className='w-[40%] h-[40%]' />
       </div>
       <h2> Name: Queen of Tears </h2>
       <h3> Ratings:8.2 </h3>
