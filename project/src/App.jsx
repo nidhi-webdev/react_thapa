@@ -4,8 +4,7 @@ const App = () => {
   return (
     <>
       <Cards />
-      <Cards />
-      <Cards />
+      
     </>
   )
 }
