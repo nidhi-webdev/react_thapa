@@ -9,7 +9,7 @@ const Cards = () => {
                 return (
                     <div className="m-4" key={idx}>
                         <div>
-                            <img src={elem.img} className='w-[40%] h-[40%]' />
+                            <img src={elem.img} className='w-[40%] h-[40%]' alt={elem.name} />
                         </div>
                         <h2> Name: {elem.name} </h2>
                         <h3> Ratings: {elem.rating} </h3>
