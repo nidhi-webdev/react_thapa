@@ -12,7 +12,7 @@ const Data = [
   {
     "name": "Stranger Things",
     "id": "stranger-things",
-    "img_url": "http://localhost:5173/images/st.jpg",
+    "img": "Images/mh.jpg",
     "rating": "8.7",
     "description": "A group of young friends witness supernatural forces and secret government exploits.",
     "cast": ["Winona Ryder", "David Harbour", "Millie Bobby Brown"],
@@ -22,7 +22,7 @@ const Data = [
   {
     "name": "The Witcher",
     "id": "the-witcher",
-    "img_url": "http://localhost:5173/images/tw.webp",
+    "img": "Images/tw.webp",
     "rating": "8.2",
     "description": "Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world.",
     "cast": ["Henry Cavill", "Anya Chalotra", "Freya Allan"],
@@ -32,7 +32,7 @@ const Data = [
   {
     "name": "Money Heist",
     "id": "money-heist",
-    "img_url": "http://localhost:5173/images/mh.jpg",
+    "img": "Images/mh.jpg",
     "rating": "8.3",
     "description": "A criminal mastermind who goes by 'The Professor' plans the biggest heist in recorded history.",
     "cast": ["Úrsula Corberó", "Álvaro Morte", "Itziar Ituño"],
@@ -42,7 +42,7 @@ const Data = [
   {
     "name": "The Crown",
     "id": "the-crown",
-    "img_url": "http://localhost:5173/images/tc.webp",
+    "img": "Images/tc.webp",
     "rating": "8.6",
     "description": "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.",
     "cast": ["Claire Foy", "Olivia Colman", "Imelda Staunton"],
@@ -52,7 +52,7 @@ const Data = [
   {
     "name": "Squid Game",
     "id": "squid-game",
-    "img_url": "http://localhost:5173/images/sg.webp",
+    "img": "Images/sg.webp",
     "rating": "8.1",
     "description": "Hundreds of cash-strapped contestants accept an invitation to compete in children's games for a tempting prize, but the stakes are deadly.",
     "cast": ["Lee Jung-jae", "Park Hae-soo", "Wi Ha-joon"],
@@ -62,7 +62,7 @@ const Data = [
   {
     "name": "Queen of Tears",
     "id": "queen-of-tears",
-    "img_url": "http://localhost:5173/images/qot.jpg",
+    "img": "Images/qot.jpg",
     "rating": "TBD",
     "description": "A gripping tale of love, loss, and resilience set against the backdrop of a war-torn nation.",
     "cast": ["Kim Soo Hyun", "Kim Ji Won"],
