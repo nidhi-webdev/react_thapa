@@ -1,8 +1,8 @@
-[
+const Data = [
   {
     "name": "Lovely Runner",
     "id": "lovely-runner",
-    "img_url": "http://localhost:5173/images/lr.webp",
+    "img": "Images/lr.webp",
     "rating": "9.8",
     "description": "Im Sol travels back in time to prevent the tragic fate of her favorite star, Ryu Sun Jae.",
     "cast": ["Kim Hye Yoon", "Byeon Woo Seok", "Song Geon Hee"],
@@ -70,3 +70,5 @@
     "watch_url": "https://www.viki.com/tv/23456789c-queen-of-tears"
   }
 ]
+
+export default Data;
