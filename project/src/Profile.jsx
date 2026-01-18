@@ -13,7 +13,7 @@ const Profile = () => {
       </div>}
       >
         <p> Hobbies: Reading, Hiking </p>
-        <button> Contact </button>
+        <button className='bg-emerald-600 px-4 py-2 rounded'> Contact </button>
       </ProfileCards>
 
        <ProfileCards 
@@ -24,7 +24,7 @@ const Profile = () => {
       </div>}
       >
         <p> Hobbies: Travelling, Musik </p>
-        <button> Contact </button>
+        <button className='bg-emerald-600 px-4 py-2 rounded'> Contact </button>
       </ProfileCards>
     </div>
   )

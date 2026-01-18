@@ -1,7 +1,6 @@
 import React from 'react'
 
 const ProfileCards = (props) => {
-console.log("From Profilecards", props);
 
 
   return (
@@ -9,7 +8,7 @@ console.log("From Profilecards", props);
       <h2> Name: {props.name} </h2>
       <p> Age: {props.age} </p>
       <p> {props.greeting} </p>
-      <div></div>
+      <div> {props.children} </div>
     </div>
   )
 }
