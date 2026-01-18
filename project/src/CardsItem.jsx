@@ -1,10 +1,10 @@
 
 
-const CardsItem = (props) => {
-    console.log("From CardItem", props);
+const CardsItem = ({ data}) => {
+    
 
 
-    const { img, name, rating, description, genre, cast, watch_url  } = props.data;
+    const { img, name, rating, description, genre, cast, watch_url  } = data;
 
     return (
 
