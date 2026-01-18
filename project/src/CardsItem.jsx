@@ -1,22 +1,23 @@
 
 
 const CardsItem = (props) => {
-console.log("From CardItem", props);
+    console.log("From CardItem", props);
 
 
+    const { data } = props;
 
     return (
 
         <div className="m-4">
             <div>
-                <img src={props.elem.img} className='w-[40%] h-[40%]' alt={props.elem.name} />
+                <img src={data.img} className='w-[40%] h-[40%]' alt={data.name} />
             </div>
-            <h2> Name: {props.elem.name} </h2>
-            <h3> Ratings: {props.elem.rating} </h3>
-            <p> Description: {props.elem.description}</p>
-            <p>Gerne: {props.elem.genre} </p>
-            <p> Cast: {props.elem.cast ? props.elem.cast.join(', ') : ''} </p>
-            <a href={props.elem.watch_url} target='_blank' rel="noopener noreferrer">
+            <h2> Name: {data.name} </h2>
+            <h3> Ratings: {data.rating} </h3>
+            <p> Description: {data.description}</p>
+            <p>Gerne: {data.genre} </p>
+            <p> Cast: {data.cast ? data.cast.join(', ') : ''} </p>
+            <a href={data.watch_url} target='_blank' rel="noopener noreferrer">
                 <button className="bg-emerald-600 px-4 py-2 rounded"> Watch Now </button>
             </a>
         </div>

@@ -7,7 +7,7 @@ const Cards = () => {
     return (
         <>
             {Data.map((elem, idx) => (
-                <CardsItem key={idx} elem={elem} />
+                <CardsItem key={idx} data={elem} />
             )
                    
                
