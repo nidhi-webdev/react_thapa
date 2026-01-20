@@ -1,5 +1,10 @@
 export const EventProps = () => {
+    
+    
+    
     return (<>
-        <WelcomeUser />
+        <WelcomeUser onclick={() => HandleWelcomeUser("Nidhi")}
+        onMouseEnter = {handleHover}
+        />
     </>)
 }
