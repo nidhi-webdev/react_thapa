@@ -14,3 +14,17 @@ export const EventProps = () => {
         />
     </>)
 }
+
+
+// now the Child component will start
+
+const WelcomeUser = (props) => {
+    return (
+        <>
+            <button> Click </button>
+            <button> Hover me </button>
+            <button> Greeting </button>
+        </>
+
+    )
+}
