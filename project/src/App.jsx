@@ -5,9 +5,9 @@ const App = () => {
   return (
     <>
     
-      {/* <Cards /> */}
+      <Cards />
 
-      <Profile />
+      {/* <Profile /> */}
       
     </>
   )
