@@ -1,6 +1,6 @@
 import Cards from "./Cards"
 import Profile from "./Profile"
-import { EventProps } from './EventProps'
+import EventPropogation from './EventPropogation'
 
 const App = () => {
   return (
@@ -8,7 +8,9 @@ const App = () => {
     
       {/* <Cards /> */}
 
-      <EventProps />
+      {/* <EventProps /> */}
+
+      <EventPropogation />
 
       {/* <Profile /> */}
       
