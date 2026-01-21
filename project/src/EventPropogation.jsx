@@ -16,10 +16,10 @@ const EventPropogation = () => {
  }
 
   return (
-    <section>
-        <div onClick={handleGrandParentClick}>
-            <div onClick={handleParentClick}>
-                <button onClick={handleChildClick}> Child Div </button>
+    <section className='flex items-center justify-center min-h-screen'>
+        <div className='bg-sky-400 border-4 border-black flex items-center justify-center h-125 w-225' onClick={handleGrandParentClick}>
+            <div className='bg-emerald-400 border-4 border-black flex items-center justify-center h-75 w-125' onClick={handleParentClick}>
+                <button className='bg-amber-400 px-4 py-2 rounded  border-4 border-black flex items-center justify-center h-20 w-75 ' onClick={handleChildClick}> Child Div </button>
             </div>
         </div>
     </section>
@@ -27,3 +27,4 @@ const EventPropogation = () => {
 }
 
 export default EventPropogation
+
