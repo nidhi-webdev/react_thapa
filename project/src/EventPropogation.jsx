@@ -12,6 +12,7 @@ const EventPropogation = () => {
 
  const handleChildClick = (e) => {
     console.log(e); 
+    e.stopPropagation()
     console.log("Child clicked")
  }
 
