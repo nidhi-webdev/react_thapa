@@ -1,7 +1,7 @@
 import Cards from "./Cards"
 import Profile from "./Profile"
 import EventPropogation from './EventPropogation'
-import UseStateComponent from './UseState'
+import UseStateComponent from './DeriveState'
 
 const App = () => {
   return (

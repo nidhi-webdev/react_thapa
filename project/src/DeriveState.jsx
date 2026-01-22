@@ -11,13 +11,16 @@ const UseState = () => {
         { name: "Angles", age: 45 },
     ]);
 
+    const userCount = users.length;
+    console.log(userCount);
+    
+
 
     return (
         <div>
             <h1> Users List </h1>
 
-           
-
+    
 
             <ul>
                 {users.map((elem, idx) => {
