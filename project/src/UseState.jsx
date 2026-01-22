@@ -1,20 +1,29 @@
-import { useState } from "react"
+// Question 
 
 
-const UseStateComponent = () => {
-    const [count, setCount] = useState(0)
+const UseState = () => {
 
-    const increment = () => {
-        setCount(count + 1)
-        
-    }
+    const users = [
+        { name: "Alice", age: 25 },
+        { name: "Bob", age: 30 },
+        { name: "Charlie", age: 35 },
+        { name: "Angles", age: 45 },
+    ];
 
     return (
-        <div className="absolute left-[45%] top-[50%]">
-            <h1 className="text-3xl"> {count} </h1>
-            <button className="bg-emerald-600  px-4 py-2 rounded" onClick={increment}> Increment </button>
+        <div>
+            <h1> Users List </h1>
+
+            <ul>
+                {users.map((elem, idx) => {
+                return <li>
+                    {elem.name} - {elem.age}
+                </li>
+                })}
+            </ul>
+
         </div>
     )
 }
 
-export default UseStateComponent
+export default UseState
