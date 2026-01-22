@@ -16,7 +16,7 @@ const UseState = () => {
 
             <ul>
                 {users.map((elem, idx) => {
-                return <li>
+                return <li key={idx}>
                     {elem.name} - {elem.age}
                 </li>
                 })}
