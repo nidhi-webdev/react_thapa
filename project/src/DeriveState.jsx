@@ -12,7 +12,8 @@ const UseState = () => {
     ]);
 
     const userCount = users.length;
-    console.log(userCount);
+    
+   const avgUser = users.reduce((acc, curr) => acc + curr.age, 0) / userCount;
     
 
 
@@ -25,10 +26,14 @@ const UseState = () => {
             <ul>
                 {users.map((elem, idx) => {
                 return <li key={idx}>
-                    {elem.name} - {elem.age}
+                {elem.name}  is {elem.age} years of old
                 </li>
                 })}
             </ul>
+
+            <p> Avrage :  {avgUser} </p>
+
+           
 
         </div>
     )
