@@ -3,25 +3,27 @@ import { useState } from "react"
 
 
 export const LiftStateUp = () => {
+    const [inputValue, setInputValue] = useState("")
+
     return (
         <div className="absolute top-[50%] left-[45%]">
-            <InputComponent />
-            <DisplayComponent />
+            <InputComponent inputValue={inputValue} setInputValue={setInputValue} />
+            <DisplayComponent inputValue={inputValue} />
         </div>
     )
 }
 
 
 // 1st child Component
-export const InputComponent = () => {
-    const [inputValue, setInputValue] = useState("")
+export const InputComponent = ({inputValue, setInputValue }) => {
 
     return (
         <>
-            <input type="text" placeholder="Enter Your Name" value={inputValue} 
-            className="border-blue-500 border-2 p-4 mb-5"
-            onChange={(e) => setInputValue(e.target.value) }
-            
+            <input type="text" placeholder="Enter Your Name" 
+                className="border-blue-500 border-2 p-4 mb-5"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+
             />
         </>
     )
@@ -29,8 +31,12 @@ export const InputComponent = () => {
 }
 
 // 2nd child Component 
-export const DisplayComponent = () => {
-    return <p> The Current input value is: </p>
+export const DisplayComponent = ({inputValue}) => {
+
+    console.log("From DisplayComponent", inputValue);
+
+
+    return <p> The Current input value is: {inputValue} </p>
 
 }
 
