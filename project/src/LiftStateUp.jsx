@@ -3,26 +3,29 @@ import { useState } from "react"
 
 
 export const LiftStateUp = () => {
-  return (
-    <>
-      <InputComponent />
-    </>
-  )
+    return (
+        <>
+            <InputComponent />
+            <DisplayComponent />
+        </>
+    )
 }
 
-const InputComponent = () => {
+export const InputComponent = () => {
     const [inputValue, setInputValue] = useState("")
 
-    return 
-    <>
-   <input type="text" placeholder="Enter Your Name" value={inputValue} />
-    </>
+    return (
+        <>
+            <input type="text" placeholder="Enter Your Name" value={inputValue} />
+        </>
+    )
+
 }
 
 
-const DisplayComponent = () => {
+export const DisplayComponent = () => {
     return <p> The Current input value is: </p>
-    
+
 }
 
 
