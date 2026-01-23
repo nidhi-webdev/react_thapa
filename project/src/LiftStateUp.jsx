@@ -11,7 +11,18 @@ export const LiftStateUp = () => {
 }
 
 const InputComponent = () => {
-    const [first, setfirst] = useState(0)
+    const [inputValue, setInputValue] = useState("")
+
+    return 
+    <>
+   <input type="text" placeholder="Enter Your Name" value={inputValue} />
+    </>
+}
+
+
+const DisplayComponent = () => {
+    return <p> The Current input value is: </p>
+    
 }
 
 
