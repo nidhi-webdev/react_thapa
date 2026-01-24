@@ -1,15 +1,20 @@
-import React from 'react'
+import { useState } from "react"
 
 const Toggle = () => {
-  return (
-    // <div className='m'>
-    <div className='bg-gray-500 p-10 w-60 m-10 rounded-full'>
-      <div className="bg-red-600 w-20 h-20 rounded-full flex items-center justify-center text-white font-bold cursor-pointer">
-        ON
-      </div>
+  const [isOn, setIsOn] = useState(false)
 
+  const handleToggle = () => {
+    setIsOn(!isOn)
+
+  }
+
+  return (
+    <div className='bg-gray-500 p-10 w-60 m-10 rounded-full' onClick={handleToggle}>
+      <div className="bg-red-600 w-20 h-20 rounded-full flex items-center justify-center text-white font-bold cursor-pointer">
+        {isOn ? "ON" : "OFF"}
+      </div>
     </div>
-    //  </div>
+
 
   )
 }
