@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+
+.on {
+    background-color: #4caf50;
+    transform: translateX(50px);
+}
+
+.off {
+    background-color: #f44336;
+    transform: translateX(0);
+}
