@@ -4,6 +4,7 @@ import EventPropogation from './EventPropogation'
 import UseStateComponent from './DeriveState'
 import { LiftStateUp } from './LiftStateUp'
 import Toggle from './projects/Toggle'
+import ToDo from './projects/Todo/ToDo'
 
 const App = () => {
   return (
@@ -20,8 +21,10 @@ const App = () => {
 
       {/* <LiftStateUp /> */}
 
-      <Toggle />
+      {/* <Toggle /> */}
       
+
+      <ToDo />
     </>
   )
 }
