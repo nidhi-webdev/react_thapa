@@ -7,12 +7,18 @@ const ToDo = () => {
                 <h1 className='font-bold text-2xl text-white'> Todo List </h1>
             </header>
             <section className=' '>
-                <form className='flex font-[1.8rem]  mx-14 p-3 '>
-                    <div>
-                        <input type="text" autoComplete="off" className='bg-[linear-gradient(100deg,#f2f3f4)] p-2.5 font-[1.8rem] rounded-2xl' />
-                    </div>
-
-                    <button type="submit" className='p-2.5 text-white text-[17px] rounded-tr-[15px] rounded-br-[15px] min-w-[25 bg-[#5dade2]'> Add Task </button>
+                <form className='flex font-[1.8rem] mx-14 p-3'>
+                    <input
+                        type="text"
+                        autoComplete="off"
+                        className='bg-[#f2f3f4] p-2.5 font-[1.8rem] rounded-l-2xl rounded-r-none outline-none flex-1'
+                    />
+                    <button
+                        type="submit"
+                        className='p-2.5 text-white text-[17px] rounded-l-none rounded-r-2xl min-w-30 bg-[#5dade2]'
+                    >
+                        Add Task
+                    </button>
                 </form>
             </section>
         </div>
