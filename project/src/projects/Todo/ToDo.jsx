@@ -4,7 +4,13 @@ const ToDo = () => {
     const [inputVlaue, setInputVlaue] = useState("")
 
     const handleInputChange = (userInputValue) => {
+        console.log(userInputValue);
+
         setInputVlaue(userInputValue)
+    }
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault(); 
     }
 
     return (
@@ -13,7 +19,7 @@ const ToDo = () => {
                 <h1 className='font-bold text-2xl text-white'> Todo List </h1>
             </header>
             <section className=' '>
-                <form className='flex font-[1.8rem] mx-14 p-3'>
+                <form className='flex font-[1.8rem] mx-14 p-3' onSubmit={handleFormSubmit}>
                     <input
                         type="text"
                         autoComplete="off"
