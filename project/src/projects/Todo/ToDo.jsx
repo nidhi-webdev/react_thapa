@@ -12,9 +12,15 @@ const ToDo = () => {
         e.preventDefault()
         if (!inputVlaue) return;
 
-        if (task.includes(inputVlaue)) return
+        if (task.includes(inputVlaue)) {
+            setInputVlaue('')
+            return
+        }
+
 
         setTask((prevValue) => [...prevValue, inputVlaue])
+        console.log(inputVlaue);
+
         setInputVlaue('')
     }
 
