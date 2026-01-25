@@ -2,6 +2,7 @@ import { useState } from "react"
 
 const ToDo = () => {
     const [inputVlaue, setInputVlaue] = useState("")
+    const [task, setTask] = useState([second])
 
     const handleInputChange = (userInputValue) => {
         console.log(userInputValue);
@@ -10,7 +11,11 @@ const ToDo = () => {
     }
 
     const handleFormSubmit = (e) => {
-        e.preventDefault(); 
+        e.preventDefault()
+        if (!inputVlaue) return;
+
+        setTask((prevValue) => [...prevValue, inputVlaue])
+      
     }
 
     return (
