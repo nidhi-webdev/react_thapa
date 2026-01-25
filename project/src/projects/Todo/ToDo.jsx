@@ -2,11 +2,9 @@ import { useState } from "react"
 
 const ToDo = () => {
     const [inputVlaue, setInputVlaue] = useState("")
-    const [task, setTask] = useState([second])
+    const [task, setTask] = useState([])
 
     const handleInputChange = (userInputValue) => {
-        console.log(userInputValue);
-
         setInputVlaue(userInputValue)
     }
 
@@ -14,8 +12,10 @@ const ToDo = () => {
         e.preventDefault()
         if (!inputVlaue) return;
 
+        if (task.includes(inputVlaue)) return
+
         setTask((prevValue) => [...prevValue, inputVlaue])
-      
+        setInputVlaue('')
     }
 
     return (
