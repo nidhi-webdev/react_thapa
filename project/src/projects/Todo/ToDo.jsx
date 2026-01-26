@@ -46,6 +46,18 @@ const ToDo = () => {
                     </button>
                 </form>
             </section>
+
+            <section>
+                <ul>
+                    {
+                        task.map((curTask, index) => {
+                            return <li key={index} >
+                                <span className="text-white"> {curTask} </span>
+                            </li>
+                        })
+                    }
+                </ul>
+            </section>
         </div>
     )
 }
