@@ -21,8 +21,6 @@ const ToDo = () => {
 
 
         setTask((prevValue) => [...prevValue, inputVlaue])
-        console.log(inputVlaue);
-
         setInputVlaue('')
     }
 
