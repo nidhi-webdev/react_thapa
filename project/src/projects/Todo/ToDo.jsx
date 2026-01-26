@@ -19,15 +19,20 @@ const ToDo = () => {
             return
         }
 
-
         setTask((prevValue) => [...prevValue, inputVlaue])
         setInputVlaue('')
     }
 
+    // Date and Time 
+    const date = new Date()
+    const formateDate = date.toLocaleDateString()
+    
+
     return (
         <div className='p-[3%] items-center flex flex-col min-h-screen bg-[linear-gradient(100deg,#001214,#001f29)] overflow-hidden transition-all duration-300 ease-linear'>
-            <header className='flex flex-col items-center justify-around text-5xl min-h-[25vh]'>
+            <header className='flex flex-col items-center justify-around  min-h-[25vh]'>
                 <h1 className='font-bold text-2xl text-white'> Todo List </h1>
+                <h2 className="text-white font-[2.4rem]"> {formateDate} - Time </h2>
             </header>
             <section className=' '>
                 <form className='flex font-[1.8rem] mx-14 p-3' onSubmit={handleFormSubmit}>
