@@ -53,14 +53,60 @@ const ToDo = () => {
                 <ul>
                     {
                         task.map((curTask, index) => {
-                            return <li key={index} className="text-black bg-amber-50 rounded-2xl px-27 py-2" >
-                                <span className="font-bold"> {curTask} </span>
-                                <button className="bg-green-600 rounded-full p-1"> <MdCheck /></button>
-                                <button className="font-[5px]"> <MdDeleteForever /></button>
-                                
-                                
+                            return <li
+                                key={index}
+                                className="
+    m-[2.4rem]
+    text-[20px]
+    text-black
+    rounded-full
+    transition-colors duration-200 ease-in-out
+    bg-[#f2f3f4]
+    min-w-80 max-w-100
+    px-6 py-3
+    grid grid-cols-[1fr_auto_auto]
+    items-center
+    gap-6
+  "
+                            >
+                                {/* LEFT TEXT */}
+                                <span className="font-bold self-center">
+                                    {curTask}
+                                </span>
+
+                                {/* CHECK BUTTON */}
+                                <button
+                                    className="
+      w-12 h-12
+      flex items-center justify-center
+      bg-green-600
+      rounded-full
+      text-white
+      cursor-pointer
+      shadow-[0_8px_24px_rgba(149,157,165,0.2)]
+    "
+                                >
+                                    <MdCheck size={26} />
+                                </button>
+
+                                {/* DELETE BUTTON */}
+                                <button
+                                    className="
+      w-12 h-12
+      flex items-center justify-center
+      bg-red-400
+      rounded-full
+      text-white
+      cursor-pointer
+      shadow-[0_8px_24px_rgba(149,157,165,0.2)]
+    "
+                                >
+                                    <MdDeleteForever size={26} />
+                                </button>
                             </li>
-            
+
+
+
                         })
                     }
                 </ul>
