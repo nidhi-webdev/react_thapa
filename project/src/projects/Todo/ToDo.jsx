@@ -53,10 +53,11 @@ const ToDo = () => {
                 <ul>
                     {
                         task.map((curTask, index) => {
-                            return <li key={index} className="text-white" >
-                                <span > {curTask} </span>
-                                <button> <MdDeleteForever /></button>
-                                <button> <MdCheck /></button>
+                            return <li key={index} className="text-black bg-amber-50 rounded-2xl px-27 py-2" >
+                                <span className="font-bold"> {curTask} </span>
+                                <button className="bg-green-600 rounded-full p-1"> <MdCheck /></button>
+                                <button className="font-[5px]"> <MdDeleteForever /></button>
+                                
                                 
                             </li>
             
