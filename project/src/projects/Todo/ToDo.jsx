@@ -24,10 +24,17 @@ const ToDo = () => {
     }
 
     // Date and Time 
-    const date = new Date()
-    const formateDate = date.toLocaleDateString()
-    const formateTime = date.toLocaleTimeString()
-    
+    const getDateTime = () => {
+        const date = new Date()
+        const formateDate = date.toLocaleDateString()
+        const formateTime = date.toLocaleTimeString()
+    }
+
+    setInterval(() => {
+        getDateTime();
+    }, 1000)
+
+
 
     return (
         <div className='p-[3%] items-center flex flex-col min-h-screen bg-[linear-gradient(100deg,#001214,#001f29)] overflow-hidden transition-all duration-300 ease-linear'>
