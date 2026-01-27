@@ -26,22 +26,21 @@ const ToDo = () => {
 
     // Date and Time 
     useEffect(() => {
-            const Interval = setInterval(() => {
-                const date = new Date()
-                const formateDate = date.toLocaleDateString()
-                const formateTime = date.toLocaleTimeString()
-                setDateTime(`${formateDate} - ${formateTime}`)
-            }, 1000);
-            return () => clearInterval(Interval)
-        
+        const Interval = setInterval(() => {
+            const date = new Date()
+            const formateDate = date.toLocaleDateString()
+            const formateTime = date.toLocaleTimeString()
+            setDateTime(`${formateDate} - ${formateTime}`)
+        }, 1000);
+        return () => clearInterval(Interval)
+
     }, [])
 
-
-console.log("hey");
-
-
-
-
+    // Delete 
+    const handleDelete = (curTaskvalue) => {
+        const updatedTask = task.filter((item) => item !== curTaskvalue);
+        setTask(updatedTask)
+    }
 
 
     return (
@@ -109,7 +108,7 @@ console.log("hey");
                                 </button>
 
                                 {/* DELETE BUTTON */}
-                                <button
+                                <button onClick={() => handleDelete(curTask)}
                                     className="
       w-12 h-12
       flex items-center justify-center
