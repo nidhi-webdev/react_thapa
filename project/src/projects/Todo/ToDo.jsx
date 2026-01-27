@@ -42,6 +42,11 @@ const ToDo = () => {
         setTask(updatedTask)
     }
 
+    // Delete All
+    const handleDeleteAll = (taskValue) => {
+       
+    }
+
 
     return (
         <div className='p-[3%] items-center flex flex-col min-h-screen bg-[linear-gradient(100deg,#001214,#001f29)] overflow-hidden transition-all duration-300 ease-linear'>
@@ -128,6 +133,12 @@ const ToDo = () => {
                         })
                     }
                 </ul>
+            </section>
+
+            {/* For clear All */}
+            <section>
+                <button onClick={() => handleDeleteAll(task)} 
+                className="bg-red-500 px-4 py-2 text-white rounded cursor-pointer hover:bg-red-700 font-bold"> Clear All </button>
             </section>
         </div>
     )
