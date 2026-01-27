@@ -5,6 +5,7 @@ import { MdCheck, MdDeleteForever } from "react-icons/md";
 const ToDo = () => {
     const [inputVlaue, setInputVlaue] = useState("")
     const [task, setTask] = useState([])
+    const [dateTime, setDateTime] = useState("")
 
     const handleInputChange = (userInputValue) => {
         setInputVlaue(userInputValue)
@@ -24,15 +25,13 @@ const ToDo = () => {
     }
 
     // Date and Time 
-    // Like this we can do in JS but here we will get error like formateDate is not defining
-    const getDateTime = () => {
+
+
+    setInterval(() => {
         const date = new Date()
         const formateDate = date.toLocaleDateString()
         const formateTime = date.toLocaleTimeString()
-    }
-
-    setInterval(() => {
-        getDateTime();
+        setDateTime(`${formateDate} - ${formateTime}`)
     }, 1000)
 
 
@@ -41,7 +40,7 @@ const ToDo = () => {
         <div className='p-[3%] items-center flex flex-col min-h-screen bg-[linear-gradient(100deg,#001214,#001f29)] overflow-hidden transition-all duration-300 ease-linear'>
             <header className='flex flex-col items-center justify-around  min-h-[25vh]'>
                 <h1 className='font-bold text-2xl text-white'> Todo List </h1>
-                <h2 className="text-white font-[3rem]"> {formateDate} - {formateTime} </h2>
+                <h2 className="text-white font-[3rem]"> {dateTime} </h2>
             </header>
             <section className=' '>
                 <form className='flex font-[1.8rem] mx-14 p-3' onSubmit={handleFormSubmit}>
