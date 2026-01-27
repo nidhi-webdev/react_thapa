@@ -43,8 +43,8 @@ const ToDo = () => {
     }
 
     // Delete All
-    const handleDeleteAll = (taskValue) => {
-       
+    const handleDeleteAll = () => {
+       setTask([])
     }
 
 
@@ -137,7 +137,7 @@ const ToDo = () => {
 
             {/* For clear All */}
             <section>
-                <button onClick={() => handleDeleteAll(task)} 
+                <button onClick={handleDeleteAll} 
                 className="bg-red-500 px-4 py-2 text-white rounded cursor-pointer hover:bg-red-700 font-bold"> Clear All </button>
             </section>
         </div>
