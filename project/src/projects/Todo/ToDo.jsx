@@ -24,6 +24,7 @@ const ToDo = () => {
     }
 
     // Date and Time 
+    // Like this we can do in JS but here we will get error like formateDate is not defining
     const getDateTime = () => {
         const date = new Date()
         const formateDate = date.toLocaleDateString()
