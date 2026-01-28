@@ -1,10 +1,12 @@
 import { MdCheck, MdDeleteForever } from "react-icons/md";
 
-const TodoList = ({ curTask, index }) => {
+const TodoList = ({ data, key, handleDeletePassing }) => {
+
+
     return (
         <ul>
             <li
-                key={index}
+                key={key}
                 className="
     m-[2.4rem]
     text-[20px]
@@ -21,7 +23,7 @@ const TodoList = ({ curTask, index }) => {
             >
                 {/* LEFT TEXT */}
                 <span className="font-bold self-center">
-                    {curTask}
+                    {data}
                 </span>
 
                 {/* CHECK BUTTON */}
@@ -40,7 +42,7 @@ const TodoList = ({ curTask, index }) => {
                 </button>
 
                 {/* DELETE BUTTON */}
-                <button onClick={() => handleDelete(curTask)}
+                <button onClick={() => handleDeletePassing(data)}
                     className="
       w-12 h-12
       flex items-center justify-center

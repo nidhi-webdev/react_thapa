@@ -20,10 +20,6 @@ const ToDo = () => {
             
         }
 
-      
-
-    
-
     // Date and Time 
     useEffect(() => {
         const Interval = setInterval(() => {
@@ -60,7 +56,7 @@ const ToDo = () => {
              
                     {
                         task.map((curTask, index) => {
-                            return <TodoList curTask={curTask} key={index} />
+                            return <TodoList data={curTask} key={index} handleDeletePassing={handleDelete} />
 
 
                         })
