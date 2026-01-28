@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
+import TododateTime from './TododateTime'
 
 
 const ToDo = () => {
     
     const [task, setTask] = useState([])
-    const [dateTime, setDateTime] = useState("")
+    
 
     const handleFormSubmit = (inputValue) => {
             
@@ -20,17 +21,6 @@ const ToDo = () => {
             
         }
 
-    // Date and Time 
-    useEffect(() => {
-        const Interval = setInterval(() => {
-            const date = new Date()
-            const formateDate = date.toLocaleDateString()
-            const formateTime = date.toLocaleTimeString()
-            setDateTime(`${formateDate} - ${formateTime}`)
-        }, 1000);
-        return () => clearInterval(Interval)
-
-    }, [])
 
     // Delete 
     const handleDelete = (curTaskvalue) => {
@@ -48,7 +38,7 @@ const ToDo = () => {
         <div className='p-[3%] items-center flex flex-col min-h-screen bg-[linear-gradient(100deg,#001214,#001f29)] overflow-hidden transition-all duration-300 ease-linear'>
             <header className='flex flex-col items-center justify-around  min-h-[25vh]'>
                 <h1 className='font-bold text-2xl text-white'> Todo List </h1>
-                <h2 className="text-white font-[3rem]"> {dateTime} </h2>
+               <TododateTime />
             </header>
             <TodoForm handleFormSubmitPassing = {handleFormSubmit} />
 
