@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 const TodoForm = ({ handleFormSubmitPassing }) => {
-    const [inputValue, setinputValue] = useState("")
+    const [inputValue, setinputValue] = useState({})
 
 
 
@@ -11,8 +11,8 @@ const TodoForm = ({ handleFormSubmitPassing }) => {
         setinputValue('')
     }
 
-      const handleInputChange = (userInputValue) => {
-        setinputValue(userInputValue)
+      const handleInputChange = (value) => {
+        setinputValue({ id:value, content: value, checked: false } )
     }
 
     return (
@@ -22,7 +22,7 @@ const TodoForm = ({ handleFormSubmitPassing }) => {
                     type="text"
                     autoComplete="off"
                     className='bg-[#f2f3f4] p-2.5 font-[1.8rem] rounded-l-2xl rounded-r-none outline-none flex-1'
-                    onChange={(e) => handleInputChange(e.target.value)} value={inputValue}
+                    onChange={(e) => handleInputChange(e.target.value)} value={inputValue.content}
                 />
                 <button
                     type="submit"

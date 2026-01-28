@@ -10,7 +10,8 @@ const ToDo = () => {
     
 
     const handleFormSubmit = (inputValue) => {
-            if (!inputValue) return;
+        const { id, content, checked } = inputValue
+            if (!content) return;
             if (task.includes(inputValue)) {
                 return
             }
