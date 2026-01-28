@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 import TododateTime from './TododateTime'
@@ -10,15 +10,11 @@ const ToDo = () => {
     
 
     const handleFormSubmit = (inputValue) => {
-            
             if (!inputValue) return;
-    
             if (task.includes(inputValue)) {
                 return
             }
-    
-            setTask((prevValue) => [...prevValue, inputValue])
-            
+            setTask((prevValue) => [...prevValue, inputValue]) 
         }
 
 
