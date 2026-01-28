@@ -1,28 +1,28 @@
 import { useEffect, useState } from "react"
 import { MdCheck, MdDeleteForever } from "react-icons/md";
+import TodoForm from './TodoForm'
 
 
 const ToDo = () => {
-    const [inputVlaue, setInputVlaue] = useState("")
+    
     const [task, setTask] = useState([])
     const [dateTime, setDateTime] = useState("")
 
-    const handleInputChange = (userInputValue) => {
-        setInputVlaue(userInputValue)
-    }
-
-    const handleFormSubmit = (e) => {
-        e.preventDefault()
-        if (!inputVlaue) return;
-
-        if (task.includes(inputVlaue)) {
-            setInputVlaue('')
-            return
+    const handleFormSubmit = (inputValue) => {
+            
+            if (!inputValue) return;
+    
+            if (task.includes(inputValue)) {
+                return
+            }
+    
+            setTask((prevValue) => [...prevValue, inputValue])
+            
         }
 
-        setTask((prevValue) => [...prevValue, inputVlaue])
-        setInputVlaue('')
-    }
+      
+
+    
 
     // Date and Time 
     useEffect(() => {
@@ -54,23 +54,7 @@ const ToDo = () => {
                 <h1 className='font-bold text-2xl text-white'> Todo List </h1>
                 <h2 className="text-white font-[3rem]"> {dateTime} </h2>
             </header>
-            <section className=' '>
-                <form className='flex font-[1.8rem] mx-14 p-3' onSubmit={handleFormSubmit}>
-                    <input
-                        type="text"
-                        autoComplete="off"
-                        className='bg-[#f2f3f4] p-2.5 font-[1.8rem] rounded-l-2xl rounded-r-none outline-none flex-1'
-                        onChange={(e) => handleInputChange(e.target.value)} value={inputVlaue}
-                    />
-                    <button
-                        type="submit"
-                        className='p-2.5 text-white text-[17px] rounded-l-none rounded-r-2xl min-w-30 bg-[#5dade2] hover:bg-amber-300 cursor-pointer'
-
-                    >
-                        Add Task
-                    </button>
-                </form>
-            </section>
+            <TodoForm handleFormSubmitPassing = {handleFormSubmit} />
 
             <section>
                 <ul>
