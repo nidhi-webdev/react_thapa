@@ -24,7 +24,9 @@ const ToDo = () => {
 
     // Delete 
     const handleDelete = (curTaskvalue) => {
-        const updatedTask = task.filter((item) => item !== curTaskvalue);
+        console.log("From ToDo", curTaskvalue);
+        
+        const updatedTask = task.filter((item) => item.content !== curTaskvalue);
         setTask(updatedTask)
     }
 
