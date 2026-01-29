@@ -1,18 +1,17 @@
 import { useState } from "react"
 
 const TodoForm = ({ handleFormSubmitPassing }) => {
-    const [inputValue, setinputValue] = useState({})
-
-
+    // Starting with an object with a content property as an empty string
+    const [inputValue, setinputValue] = useState({ content: "" })
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
         handleFormSubmitPassing(inputValue)
-        setinputValue('')
+        setinputValue({ content: "" }) // Reset to initial state
     }
 
-      const handleInputChange = (value) => {
-        setinputValue({ id:value, content: value, checked: false } )
+    const handleInputChange = (value) => {
+        setinputValue({ id: value, content: value, checked: false })
     }
 
     return (
@@ -27,7 +26,6 @@ const TodoForm = ({ handleFormSubmitPassing }) => {
                 <button
                     type="submit"
                     className='p-2.5 text-white text-[17px] rounded-l-none rounded-r-2xl min-w-30 bg-[#5dade2] hover:bg-amber-300 cursor-pointer'
-
                 >
                     Add Task
                 </button>
