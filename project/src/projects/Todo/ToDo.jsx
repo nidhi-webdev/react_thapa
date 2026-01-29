@@ -47,15 +47,13 @@ const ToDo = () => {
                 <h1 className='font-bold text-2xl text-white'> Todo List </h1>
                 <TododateTime />
             </header>
-            <TodoForm handleFormSubmitPassing={handleFormSubmit} handleCheckedTodoPassing={handleCheckedTodo}
-            checked={curTask.checked}
-             />
+            <TodoForm handleFormSubmitPassing={handleFormSubmit} handleCheckedTodoPassing={handleCheckedTodo} />
 
             <section>
 
                 {
                     task.map((curTask) => {
-                        return <TodoList data={curTask.content} key={curTask.id} handleDeletePassing={handleDelete} />
+                        return <TodoList data={curTask.content} key={curTask.id} checked={curTask.checked} handleDeletePassing={handleDelete} />
 
 
                     })

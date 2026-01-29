@@ -20,7 +20,8 @@ const TodoList = ({ data, handleDeletePassing, handleCheckedTodoPassing, checked
   "
             >
                 {/* LEFT TEXT */}
-                <span className="font-bold self-center">
+                <span className={`font-bold self-center ${checked ? "checkList" : "notCheckList"}`}>
+
                     {data}
                 </span>
 

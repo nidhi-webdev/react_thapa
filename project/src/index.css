@@ -10,3 +10,11 @@
     background-color: #f44336;
     transform: translateX(0);
 }
+
+.checkList {
+    text-decoration: line-through;
+}
+
+.notCheckList {
+    text-decoration: none;
+}
