@@ -11,11 +11,14 @@ const ToDo = () => {
 
     const handleFormSubmit = (inputValue) => {
         const { id, content, checked } = inputValue
+        // To check if the empty field is empty or not 
             if (!content) return;
-            if (task.includes(inputValue)) {
-                return
-            }
-            setTask((prevValue) => [...prevValue, inputValue]) 
+
+            // to check the data is alreday existing or not 
+            const ifTodoContentMatch = task.find((curTask) => curTask.content === content )
+            if(ifTodoContentMatch) return
+            
+            setTask((prevValue) => [...prevValue, {id, content, checked}]) 
         }
 
 
@@ -42,8 +45,8 @@ const ToDo = () => {
             <section>
              
                     {
-                        task.map((curTask, index) => {
-                            return <TodoList data={curTask} key={index} handleDeletePassing={handleDelete} />
+                        task.map((curTask) => {
+                            return <TodoList data={curTask} key={curTask.id} handleDeletePassing={handleDelete} />
 
 
                         })
