@@ -24,7 +24,7 @@ const ToDo = () => {
 
     // Delete 
     const handleDelete = (curTaskvalue) => {
-        console.log("From ToDo", curTaskvalue);
+
 
         const updatedTask = task.filter((item) => item.content !== curTaskvalue);
         setTask(updatedTask)
@@ -36,8 +36,16 @@ const ToDo = () => {
     }
 
     // Checked Todo
-    const handleCheckedTodo = () => {
-        console.log("Hey form Checked ")
+    const handleCheckedTodo = (content) => {
+        const checkUncheck = task.map((curTask) => {
+            if (curTask.content === content) {
+                return { ...curTask, checked: !curTask.checked }
+            } else {
+                return curTask
+            }
+
+        })
+        setTask(checkUncheck)
     }
 
 
@@ -47,13 +55,13 @@ const ToDo = () => {
                 <h1 className='font-bold text-2xl text-white'> Todo List </h1>
                 <TododateTime />
             </header>
-            <TodoForm handleFormSubmitPassing={handleFormSubmit} handleCheckedTodoPassing={handleCheckedTodo} />
+            <TodoForm handleFormSubmitPassing={handleFormSubmit} />
 
             <section>
 
                 {
                     task.map((curTask) => {
-                        return <TodoList data={curTask.content} key={curTask.id} checked={curTask.checked} handleDeletePassing={handleDelete} />
+                        return <TodoList data={curTask.content} key={curTask.id} checked={curTask.checked} handleCheckedTodoPassing={handleCheckedTodo} handleDeletePassing={handleDelete} />
 
 
                     })

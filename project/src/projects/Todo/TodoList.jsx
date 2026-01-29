@@ -26,7 +26,7 @@ const TodoList = ({ data, handleDeletePassing, handleCheckedTodoPassing, checked
                 </span>
 
                 {/* CHECK BUTTON */}
-                <button
+                <button onClick={() => handleCheckedTodoPassing(data)}
                     className="
       w-12 h-12
       flex items-center justify-center
@@ -37,7 +37,7 @@ const TodoList = ({ data, handleDeletePassing, handleCheckedTodoPassing, checked
       shadow-[0_8px_24px_rgba(149,157,165,0.2)]
     "
                 >
-                    <MdCheck size={26} />
+                    <MdCheck size={26}  />
                 </button>
 
                 {/* DELETE BUTTON */}
