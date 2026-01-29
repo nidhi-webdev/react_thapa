@@ -46,7 +46,7 @@ const ToDo = () => {
              
                     {
                         task.map((curTask) => {
-                            return <TodoList data={curTask} key={curTask.id} handleDeletePassing={handleDelete} />
+                            return <TodoList data={curTask.content} key={curTask.id} handleDeletePassing={handleDelete} />
 
 
                         })
