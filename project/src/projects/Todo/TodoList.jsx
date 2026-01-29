@@ -1,7 +1,7 @@
 import { MdCheck, MdDeleteForever } from "react-icons/md";
 
 // Remove 'key' from props, add 'id' instead
-const TodoList = ({ data, handleDeletePassing }) => {
+const TodoList = ({ data, handleDeletePassing, handleCheckedTodoPassing, checked}) => {
     return (
         <ul>
             <li
