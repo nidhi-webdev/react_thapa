@@ -7,11 +7,9 @@ import TododateTime from './TododateTime'
  const toDokey = "reactToDo"
 
 const ToDo = () => {
-
-   
-
     const [task, setTask] = useState(() => {
       const getTodoData = JSON.parse(localStorage.getItem(toDokey))
+      if(!getTodoData ) return  [];
       return getTodoData
     })
 
