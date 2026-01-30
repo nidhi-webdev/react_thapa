@@ -2,16 +2,13 @@ import { useState } from "react"
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 import TododateTime from './TododateTime'
+import { getTodo, setTodo } from './TodoLocalStorage'
 
 
- const toDokey = "reactToDo"
+
 
 const ToDo = () => {
-    const [task, setTask] = useState(() => {
-      const getTodoData = JSON.parse(localStorage.getItem(toDokey))
-      if(!getTodoData ) return  [];
-      return getTodoData
-    })
+    const [task, setTask] = useState(() => getTodo())
 
 
     const handleFormSubmit = (inputValue) => {
@@ -54,8 +51,7 @@ const ToDo = () => {
     }
 
     // Todo Local Storage 
-     localStorage.setItem(toDokey, JSON.stringify(task))
-
+    setTodo(task)
 
     return (
         <div className='p-[3%] items-center flex flex-col min-h-screen bg-[linear-gradient(100deg,#001214,#001f29)] overflow-hidden transition-all duration-300 ease-linear'>
