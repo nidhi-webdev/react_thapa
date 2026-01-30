@@ -5,6 +5,7 @@ import UseStateComponent from './DeriveState'
 import { LiftStateUp } from './LiftStateUp'
 import Toggle from './projects/Toggle'
 import ToDo from './projects/Todo/ToDo'
+import ShortCircuit from './projects/shortCircuit/ShortCircuit'
 
 const App = () => {
   return (
@@ -24,7 +25,9 @@ const App = () => {
       {/* <Toggle /> */}
       
 
-      <ToDo />
+      {/* <ToDo /> */}
+
+      <ShortCircuit />
     </>
   )
 }
