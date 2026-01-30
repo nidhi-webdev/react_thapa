@@ -2,15 +2,17 @@ import React from 'react'
 
 const ShortCircuit = () => {
   return (
-    <div>
-      <h1> Welcome to the ShortCircuit Evaluation </h1>
+    <div className='flex items-center justify-center mt-10 '>
+      <div>
+        <h1 className='font-bold'> Welcome to the ShortCircuit Evaluation </h1>
 
-      <p> You are logged in!</p>
+        <p> You are logged in!</p>
 
-      <div> 
-        <button> Toggle Login State </button>
-        <button> Set User </button>
-        <button> Clear User </button>
+        <div> 
+          <button className='bg-black px-4 py-2 text-white mr-3'> Toggle Login State </button>
+          <button className='bg-black px-4 py-2 text-white mr-3'> Set User </button>
+          <button className='bg-black px-4 py-2 text-white mr-3'> Clear User </button>
+        </div>
       </div>
     </div>
   )
