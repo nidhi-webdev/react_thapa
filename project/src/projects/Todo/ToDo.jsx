@@ -4,9 +4,16 @@ import TodoList from './TodoList'
 import TododateTime from './TododateTime'
 
 
+ const toDokey = "reactToDo"
+
 const ToDo = () => {
 
-    const [task, setTask] = useState([])
+   
+
+    const [task, setTask] = useState(() => {
+      const getTodoData = JSON.parse(localStorage.getItem(toDokey))
+      return getTodoData
+    })
 
 
     const handleFormSubmit = (inputValue) => {
@@ -49,7 +56,7 @@ const ToDo = () => {
     }
 
     // Todo Local Storage 
-     localStorage.setItem("reactToDo", JSON.stringify(task))
+     localStorage.setItem(toDokey, JSON.stringify(task))
 
 
     return (
