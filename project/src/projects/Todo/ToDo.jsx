@@ -48,6 +48,9 @@ const ToDo = () => {
         setTask(checkUncheck)
     }
 
+    // Todo Local Storage 
+     localStorage.setItem("reactToDo", JSON.stringify(task))
+
 
     return (
         <div className='p-[3%] items-center flex flex-col min-h-screen bg-[linear-gradient(100deg,#001214,#001f29)] overflow-hidden transition-all duration-300 ease-linear'>
