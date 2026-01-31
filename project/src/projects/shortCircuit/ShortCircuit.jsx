@@ -23,8 +23,9 @@ const ShortCircuit = () => {
                 
                 <button onClick={() => setUser("Nidhi")}
                     className='bg-black px-36 py-2 text-white mr-3 cursor-pointer'> Set User </button>
-                    
-                <button className='bg-black px-36 py-2 text-white mr-3 cursor-pointer '> Clear User </button>
+
+                <button onClick={() => setUser("")}
+                className='bg-black px-36 py-2 text-white mr-3 cursor-pointer '> Clear User </button>
 
             </div>
         </div>
