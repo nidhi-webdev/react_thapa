@@ -3,6 +3,7 @@ import { useState } from "react"
 
 const ShortCircuit = () => {
     const [isloggedIn, setIsloggedIn] = useState(true)
+    const [user, setUser] = useState("")
 
 
 
@@ -14,10 +15,14 @@ const ShortCircuit = () => {
             </div>
 
             <div className='ml-24'>
-                {isloggedIn && <p className='mb-5 text-xl'> You are logged in!</p> }
+                {isloggedIn && <p className='mb-5 text-xl'> You are logged in!</p>}
+               <div className="mb-2"> {user ? `Hello ${user}` : ""} </div>
                 <button onClick={() => setIsloggedIn(!isloggedIn)}
                     className='bg-black px-36 py-2 text-white mr-3 cursor-pointer'> Toggle Login State </button>
-                <button className='bg-black px-36 py-2 text-white mr-3 cursor-pointer'> Set User </button>
+
+                
+                <button onClick={() => setUser("Nidhi")}
+                    className='bg-black px-36 py-2 text-white mr-3 cursor-pointer'> Set User </button>
                 <button className='bg-black px-36 py-2 text-white mr-3 cursor-pointer '> Clear User </button>
 
             </div>
