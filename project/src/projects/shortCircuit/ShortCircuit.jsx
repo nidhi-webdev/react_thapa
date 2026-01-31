@@ -1,6 +1,12 @@
-import React from 'react'
+import { useState } from "react"
+
 
 const ShortCircuit = () => {
+    const [isloggedIn, setIsloggedIn] = useState(true)
+
+
+
+
     return (
         <div className=' mt-10 '>
             <div className='font-bold text-4xl mb-10 flex items-center justify-center'>
@@ -8,10 +14,11 @@ const ShortCircuit = () => {
             </div>
 
             <div className='ml-24'>
-                <p className='mb-5 text-xl'> You are logged in!</p>
-                <button className='bg-black px-36 py-2 text-white mr-3'> Toggle Login State </button>
-                <button className='bg-black px-36 py-2 text-white mr-3'> Set User </button>
-                <button className='bg-black px-36 py-2 text-white mr-3'> Clear User </button>
+                {isloggedIn && <p className='mb-5 text-xl'> You are logged in!</p> }
+                <button onClick={() => setIsloggedIn(!isloggedIn)}
+                    className='bg-black px-36 py-2 text-white mr-3 cursor-pointer'> Toggle Login State </button>
+                <button className='bg-black px-36 py-2 text-white mr-3 cursor-pointer'> Set User </button>
+                <button className='bg-black px-36 py-2 text-white mr-3 cursor-pointer '> Clear User </button>
 
             </div>
         </div>
