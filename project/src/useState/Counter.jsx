@@ -5,7 +5,10 @@ const Counter = () => {
     const [step, setStep] = useState(0)
 
     const handleIncrement = () => {
-        setCount(count + step)
+        if(count < 100 ) {
+             setCount(count + step)
+        }
+       
     }
 
     const handleDecrement = () => {
