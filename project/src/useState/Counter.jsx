@@ -5,27 +5,16 @@ const Counter = () => {
     const [step, setStep] = useState(0)
 
     const handleIncrement = () => {
-        if(count < 100 ) {
              setCount(count + step)
-        }
-       
     }
 
     const handleDecrement = () => {
-        if (count > 0) {
             setCount(count - step)
-        }
-
     }
 
     const handleReset = () => {
         setCount(0)
     }
-    // const handleStep = (e) => {
-    //     setCount(count + e)
-
-    // }
-
 
     return (
         <div className="flex items-center justify-center flex-col mt-10">
@@ -35,9 +24,9 @@ const Counter = () => {
             <div className="mb-5"> Step: <input type="text" value={step} onChange={(e) => setStep(Number(e.target.value))}
                 className="border-green-800 border-2 rounded" /> </div>
             <div className="">
-                <button onClick={handleIncrement}
+                <button onClick={handleIncrement} disabled = {(count >= 100 )}
                     className="bg-black px-6 py-3 text-white rounded cursor-pointer mr-5"> Increment  </button>
-                <button onClick={handleDecrement}
+                <button onClick={handleDecrement} disabled = {(count <= 0 )}
                     className="bg-black px-6 py-3 text-white rounded cursor-pointer mr-5"> Decrement  </button>
                 <button onClick={handleReset}
                     className="bg-black px-6 py-3 text-white rounded cursor-pointer mr-5"> Reset  </button>
