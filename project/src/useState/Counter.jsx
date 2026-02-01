@@ -2,14 +2,15 @@ import { useState } from "react"
 
 const Counter = () => {
     const [count, setCount] = useState(0)
+    const [step, setStep] = useState(0)
 
     const handleIncrement = () => {
-        setCount(count + 1)
+        setCount(count + step)
     }
 
     const handleDecrement = () => {
         if (count > 0) {
-            setCount(count - 1)
+            setCount(count - step)
         }
 
     }
@@ -17,10 +18,10 @@ const Counter = () => {
     const handleReset = () => {
         setCount(0)
     }
-    const handleStep = (e) => {
-        setCount( count + e )
+    // const handleStep = (e) => {
+    //     setCount(count + e)
 
-    }
+    // }
 
 
     return (
@@ -28,7 +29,7 @@ const Counter = () => {
             <h1 className="font-bold text-4xl"> Usestate Hooks </h1>
             <br />
             <p className="mb-4 text-2xl"> Count : {count} </p>
-            <div className="mb-5"> Step: <input type="text" onChange={(e) => handleStep(e.target.value)}
+            <div className="mb-5"> Step: <input type="text" value={step} onChange={(e) => setStep(Number(e.target.value))}
                 className="border-green-800 border-2 rounded" /> </div>
             <div className="">
                 <button onClick={handleIncrement}
