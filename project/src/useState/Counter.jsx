@@ -17,7 +17,10 @@ const Counter = () => {
     const handleReset = () => {
         setCount(0)
     }
+    const handleStep = (e) => {
+        setCount( count + e )
 
+    }
 
 
     return (
@@ -25,10 +28,11 @@ const Counter = () => {
             <h1 className="font-bold text-4xl"> Usestate Hooks </h1>
             <br />
             <p className="mb-4 text-2xl"> Count : {count} </p>
-            <div className="mb-5"> Step: <input type="text" className="border-green-800 border-2 rounded" /> </div>
+            <div className="mb-5"> Step: <input type="text" onChange={(e) => handleStep(e.target.value)}
+                className="border-green-800 border-2 rounded" /> </div>
             <div className="">
                 <button onClick={handleIncrement}
-                    className="bg-black px-6 py-3 text-white rounded cursor-pointer mr-5   "> Increment  </button>
+                    className="bg-black px-6 py-3 text-white rounded cursor-pointer mr-5"> Increment  </button>
                 <button onClick={handleDecrement}
                     className="bg-black px-6 py-3 text-white rounded cursor-pointer mr-5"> Decrement  </button>
                 <button onClick={handleReset}
