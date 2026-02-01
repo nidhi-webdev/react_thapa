@@ -7,15 +7,18 @@ const Counter = () => {
         setCount(count + 1)
     }
 
-     const handleDecrement = () => {
-        setCount(count - 1)
+    const handleDecrement = () => {
+        if (count > 0) {
+            setCount(count - 1)
+        }
+
     }
 
-     const handleReset = () => {
+    const handleReset = () => {
         setCount(0)
     }
-    
-    
+
+
 
     return (
         <div className="flex items-center justify-center flex-col mt-10">
