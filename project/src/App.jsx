@@ -7,6 +7,7 @@ import Toggle from './projects/Toggle'
 import ToDo from './projects/Todo/ToDo'
 import ShortCircuit from './projects/shortCircuit/ShortCircuit'
 import Counter from './useState/Counter'
+import RegistrationForm from './useState/RegistrationForm'
 
 const App = () => {
   return (
@@ -30,7 +31,8 @@ const App = () => {
 
       {/* <ShortCircuit /> */}
 
-      <Counter />
+      {/* <Counter /> */}
+      <RegistrationForm />
     </>
   )
 }
