@@ -14,7 +14,8 @@ const RegistrationForm = () => {
     const handleInputChange = (e) => {
         const { name, value } = e.target
 
-        setUser()
+        setUser((prev) => ({...prev, [name]: value}))
+     
     }
 
 
@@ -77,7 +78,7 @@ const RegistrationForm = () => {
                             <label className="block mb-1 font-medium">Phone Number</label>
                             <input
                                 type='text'
-                                name='phone'
+                                name='phoneNumber'
                                 placeholder='Enter Number' required
                                 value={user.phoneNumber}
                                 onChange={handleInputChange}
