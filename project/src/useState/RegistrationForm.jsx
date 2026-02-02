@@ -1,6 +1,17 @@
-import React from 'react'
+import { useState } from "react"
+
 
 const RegistrationForm = () => {
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [phoneNumber, setPhoneNumber] = useState("")
+
+    
+
+
+
     return (
         <div className='flex justify-center items-center min-h-screen bg-red-50'>
             <form className="bg-white shadow-2xl rounded-lg p-8 w-full max-w-md">
@@ -10,23 +21,53 @@ const RegistrationForm = () => {
                 <div className='flex flex-col gap-4'>
                     <div>
                         <label className="block mb-1 font-medium">First Name</label>
-                        <input type='text' name='firstName' placeholder='Enter First Name' required className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200"/>
+                        <input type='text' 
+                        name='firstName' 
+                        placeholder='Enter First Name' 
+                        required 
+                        value={firstName}
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
                     </div>
                     <div>
                         <label className="block mb-1 font-medium">Last Name</label>
-                        <input type='text' name='lastName' placeholder='Enter Last Name' required className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200"/>
+                        <input 
+                        type='text' 
+                        name='lastName' 
+                        placeholder='Enter Last Name' required
+                        value={lastName} 
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
                     </div>
                     <div>
                         <label className="block mb-1 font-medium">Email</label>
-                        <input type='email' name='email' placeholder='Enter Email' required className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200"/>
+                        <input 
+                        type='email' 
+                        name='email' 
+                        placeholder='Enter Email' required 
+                        value={email}
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
                     </div>
                     <div>
                         <label className="block mb-1 font-medium">Password</label>
-                        <input type='password' name='password' placeholder='Enter Password' required className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200"/>
+                        <input 
+                        type='password' 
+                        name='password' 
+                        placeholder='Enter Password' required 
+                        value={password}
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
                     </div>
                     <div>
                         <label className="block mb-1 font-medium">Phone Number</label>
-                        <input type='tel' name='phone' placeholder='Enter Number' required className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200"/>
+                        <input 
+                        type='text' 
+                        name='phone' 
+                        placeholder='Enter Number' required
+                        value={phoneNumber} 
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
                     </div>
                 </div>
 
