@@ -2,37 +2,19 @@ import { useState } from "react"
 
 
 const RegistrationForm = () => {
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [phoneNumber, setPhoneNumber] = useState("")
+    const [user, setUser] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        phoneNumber: ""
+    })
+    
 
     const handleInputChange = (e) => {
         const { name, value } = e.target
 
-        switch (name) {
-            case "firstName":
-                setFirstName(value)
-                break;
-
-            case "lastName":
-                setLastName(value)
-                break;
-
-            case "email":
-                setEmail(value)
-                break;
-
-            case "password":
-                setPassword(value)
-                break;
-
-            case "phone":
-                setPhoneNumber(value)
-                break;
-
-        }
+       setUser()
     }
 
 
@@ -50,7 +32,7 @@ const RegistrationForm = () => {
                             name='firstName'
                             placeholder='Enter First Name'
                             required
-                            value={firstName}
+                            value={user.firstName}
                             onChange={handleInputChange}
                             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
                     </div>
@@ -60,7 +42,7 @@ const RegistrationForm = () => {
                             type='text'
                             name='lastName'
                             placeholder='Enter Last Name' required
-                            value={lastName}
+                            value={user.lastName}
                             onChange={handleInputChange}
                             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
                     </div>
@@ -70,7 +52,7 @@ const RegistrationForm = () => {
                             type='email'
                             name='email'
                             placeholder='Enter Email' required
-                            value={email}
+                            value={user.email}
                             onChange={handleInputChange}
                             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
                     </div>
@@ -80,7 +62,7 @@ const RegistrationForm = () => {
                             type='password'
                             name='password'
                             placeholder='Enter Password' required
-                            value={password}
+                            value={user.password}
                             onChange={handleInputChange}
                             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
                     </div>
@@ -90,7 +72,7 @@ const RegistrationForm = () => {
                             type='text'
                             name='phone'
                             placeholder='Enter Number' required
-                            value={phoneNumber}
+                            value={user.phoneNumber}
                             onChange={handleInputChange}
                             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
                     </div>
