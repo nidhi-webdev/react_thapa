@@ -6,10 +6,13 @@ const LoginForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(userName);
-        console.log(password);
-        setUserName("")
-        setPassword("")
+        
+        const loginData = {
+            userName,
+            password
+        }
+        console.log(loginData);
+        
         
     }
 
