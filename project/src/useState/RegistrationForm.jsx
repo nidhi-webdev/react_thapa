@@ -13,15 +13,22 @@ const RegistrationForm = () => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target
-
         setUser((prev) => ({ ...prev, [name]: value }))
 
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("From Registration Form",user);
-        
+        console.log("From Registration Form", user);
+        setUser({
+            firstName: "",
+            lastName: "",
+            email: "",
+            password: "",
+            phoneNumber: ""
+        })
+
+
     }
 
 
