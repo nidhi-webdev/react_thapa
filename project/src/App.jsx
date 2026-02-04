@@ -12,8 +12,8 @@ import RegistrationForm from './useState/RegistrationForm'
 const App = () => {
   return (
     <>
-    
-    {/* <UseStateComponent /> */}
+
+      {/* <UseStateComponent /> */}
       {/* <Cards /> */}
 
       {/* <EventProps /> */}
@@ -25,7 +25,7 @@ const App = () => {
       {/* <LiftStateUp /> */}
 
       {/* <Toggle /> */}
-      
+
 
       {/* <ToDo /> */}
 
