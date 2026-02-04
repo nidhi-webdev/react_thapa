@@ -8,6 +8,8 @@ import ToDo from './projects/Todo/ToDo'
 import ShortCircuit from './projects/shortCircuit/ShortCircuit'
 import Counter from './useState/Counter'
 import RegistrationForm from './useState/RegistrationForm'
+import LoginForm from './useState/LoginForm'
+
 
 const App = () => {
   return (
@@ -32,7 +34,8 @@ const App = () => {
       {/* <ShortCircuit /> */}
 
       {/* <Counter /> */}
-      <RegistrationForm />
+      {/* <RegistrationForm /> */}
+      <LoginForm />
     </>
   )
 }
