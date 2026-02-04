@@ -14,8 +14,14 @@ const RegistrationForm = () => {
     const handleInputChange = (e) => {
         const { name, value } = e.target
 
-        setUser((prev) => ({...prev, [name]: value}))
-     
+        setUser((prev) => ({ ...prev, [name]: value }))
+
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log("From Registration Form",user);
+        
     }
 
 
@@ -29,7 +35,7 @@ const RegistrationForm = () => {
             </section>
 
             <div className='flex justify-center items-center min-h-screen bg-red-50'>
-                <form className="bg-white shadow-2xl rounded-lg p-8 w-full max-w-md">
+                <form className="bg-white shadow-2xl rounded-lg p-8 w-full max-w-md" onSubmit={handleSubmit}>
                     <h1 className="text-3xl font-bold mb-2 text-center">Sign Up</h1>
                     <p className="mb-6 text-center text-gray-600">Please Fill This Form To Create An Account</p>
 
