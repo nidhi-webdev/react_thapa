@@ -9,6 +9,7 @@ import ShortCircuit from './projects/shortCircuit/ShortCircuit'
 import Counter from './useState/Counter'
 import RegistrationForm from './useState/RegistrationForm'
 import LoginForm from './useState/LoginForm'
+import ContactForm from './useState/ContactForm'
 
 
 const App = () => {
@@ -35,7 +36,8 @@ const App = () => {
 
       {/* <Counter /> */}
       {/* <RegistrationForm /> */}
-      <LoginForm />
+      {/* <LoginForm /> */}
+      <ContactForm />
     </>
   )
 }
