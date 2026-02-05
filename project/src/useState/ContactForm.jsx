@@ -13,6 +13,9 @@ const ContactForm = () => {
             email,
             message
         }
+        setUserName("")
+        setEmail("")
+        setMessage("")
 
         console.log(contactData);
 
