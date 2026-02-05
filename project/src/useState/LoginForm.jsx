@@ -12,6 +12,8 @@ const LoginForm = () => {
             password
         }
         console.log(loginData);
+        setUserName("")
+        setPassword("")
         
         
     }
