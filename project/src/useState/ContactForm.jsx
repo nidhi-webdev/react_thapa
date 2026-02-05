@@ -3,14 +3,14 @@ import { useState } from "react"
 
 const ContactForm = () => {
     const [userName, setUserName] = useState("")
-    const [password, setPassword] = useState("")
+    const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
 
     const handleSumbit = (e) => {
         e.preventDefault()
         const contactData = {
             userName,
-            password,
+            email,
             message
         }
 
@@ -34,19 +34,19 @@ const ContactForm = () => {
 
                     </div>
                     <div>
-                        <label className="block mb-1 font-medium"> password </label>
-                        <input type='password' name='password' required autoComplete='off'
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                        <label className="block mb-1 font-medium"> Email </label>
+                        <input type='email' name='email' required autoComplete='off'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
 
                     </div>
                     <div>
                         <label className="block mb-1 font-medium"> Message </label>
-                        <input type='text' name='message' required autoComplete='off'
+                        <textarea type='text' name='message' required autoComplete='off'
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            className="w-full px-3 py-10 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
+                            className="w-full px-3 py-2 border rounded align-top focus:outline-none focus:ring-2 focus:ring-red-200" />
 
                     </div>
                 </div>
