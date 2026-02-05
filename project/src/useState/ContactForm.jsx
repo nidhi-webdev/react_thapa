@@ -35,7 +35,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                         <label className="block mb-1 font-medium"> password </label>
-                        <input type='text' name='password' required autoComplete='off'
+                        <input type='password' name='password' required autoComplete='off'
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
