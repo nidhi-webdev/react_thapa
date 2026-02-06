@@ -10,6 +10,7 @@ import Counter from './useState/Counter'
 import RegistrationForm from './useState/RegistrationForm'
 import LoginForm from './useState/LoginForm'
 import ContactForm from './useState/ContactForm'
+import Example from './useEffect/Example'
 
 
 const App = () => {
@@ -37,7 +38,8 @@ const App = () => {
       {/* <Counter /> */}
       {/* <RegistrationForm /> */}
       {/* <LoginForm /> */}
-      <ContactForm />
+      {/* <ContactForm /> */}
+      <Example />
     </>
   )
 }
