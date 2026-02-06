@@ -2,23 +2,20 @@ import { useState } from "react"
 
 
 const ContactForm = () => {
-    const [userName, setUserName] = useState("")
-    const [email, setEmail] = useState("")
-    const [message, setMessage] = useState("")
+    const [contact, setContact] = useState({
+        userName: "",
+        email: "",
+        message: ""
+    })
 
     const handleSumbit = (e) => {
         e.preventDefault()
-        const contactData = {
-            userName,
-            email,
-            message
-        }
-        setUserName("")
-        setEmail("")
-        setMessage("")
+        console.log(contact);
+    }
 
-        console.log(contactData);
-
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setContact((prev) => ({ ...prev, [name]: value }))
     }
 
     return (
@@ -29,26 +26,29 @@ const ContactForm = () => {
                 <div className='flex flex-col gap-6'>
                     <div>
                         <label className="block mb-1 font-medium"> Username </label>
-                        <input type='text' name='userName' required autoComplete='off'
-                            value={userName}
-                            onChange={(e) => setUserName(e.target.value)}
+                        <input type='text' required autoComplete='off'
+                            name='userName'
+                            value={contact.userName}
+                            onChange={handleInputChange}
                             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
 
 
                     </div>
                     <div>
                         <label className="block mb-1 font-medium"> Email </label>
-                        <input type='email' name='email' required autoComplete='off'
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                        <input type='email' required autoComplete='off'
+                            name='email'
+                            value={contact.email}
+                            onChange={handleInputChange}
                             className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-200" />
 
                     </div>
                     <div>
                         <label className="block mb-1 font-medium"> Message </label>
-                        <textarea type='text' name='message' required autoComplete='off'
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
+                        <textarea type='text' required autoComplete='off'
+                            name='message'
+                            value={contact.message}
+                            onChange={handleInputChange}
                             className="w-full px-3 py-2 border rounded align-top focus:outline-none focus:ring-2 focus:ring-red-200" />
 
                     </div>
