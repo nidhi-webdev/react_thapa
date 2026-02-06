@@ -10,6 +10,11 @@ const ContactForm = () => {
 
     const handleSumbit = (e) => {
         e.preventDefault()
+        setContact({
+            userName: "",
+            email: "",
+            message: ""
+        })
         console.log(contact);
     }
 
