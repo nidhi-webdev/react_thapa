@@ -4,9 +4,10 @@ const Example = () => {
     const [date, setDate] = useState(0)
 
     useEffect(() => {
-        const updatedDate = new Date();
-        setDate(updatedDate.toLocaleTimeString())
-
+        setInterval(() => {
+            const updatedDate = new Date();
+            setDate(updatedDate.toLocaleTimeString())
+        }, 1000)
     }, [])
 
 
