@@ -18,7 +18,8 @@ const UseEffectExample = () => {
 
             <p className="text-white"> Name: {name}  </p>
 
-            <input className="bg-white px-4 py-3 rounded" />
+            <input value={name} onChange={(e) => setName(e.target.value)}
+            className="bg-white px-4 py-3 rounded" />
         </div>
     )
 }
