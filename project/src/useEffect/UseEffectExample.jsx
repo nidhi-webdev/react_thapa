@@ -1,10 +1,15 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 
 const UseEffectExample = () => {
     const [count, setCount] = useState(0)
     const [name, setName] = useState("")
+
+   useEffect(() => {
+    console.log("The User Typed Value:", name)
+   }, [name])
+    
 
     return (
 
