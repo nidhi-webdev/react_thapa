@@ -9,7 +9,7 @@ const UseEffectExample = () => {
 
     useEffect(() => {
         document.title = `Count: ${count}`
-    }, [])
+    }, [count])
 
    useEffect(() => {
     console.log("The User Typed Value:", name)
