@@ -11,6 +11,7 @@ import RegistrationForm from './useState/RegistrationForm'
 import LoginForm from './useState/LoginForm'
 import ContactForm from './useState/ContactForm'
 import Example from './useEffect/Example'
+import UseEffectExample from './useEffect/UseEffectExample'
 
 
 const App = () => {
@@ -39,7 +40,8 @@ const App = () => {
       {/* <RegistrationForm /> */}
       {/* <LoginForm /> */}
       {/* <ContactForm /> */}
-      <Example />
+      {/* <Example /> */}
+      <UseEffectExample />
     </>
   )
 }
