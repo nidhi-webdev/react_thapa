@@ -6,6 +6,11 @@ const UseEffectExample = () => {
     const [count, setCount] = useState(0)
     const [name, setName] = useState("")
 
+
+    useEffect(() => {
+        document.title = `Count: ${count}`
+    }, [])
+
    useEffect(() => {
     console.log("The User Typed Value:", name)
    }, [name])
