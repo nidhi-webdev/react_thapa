@@ -7,16 +7,16 @@ const UseEffectExample = () => {
 
   return (
     // <div></div>
-    <div className="flex justify-center items-center min-h-screen flex-col gap-y-4 bg-blue">
+    <div className="flex justify-center items-center min-h-screen flex-col gap-y-4 bg-[#061935]">
 
-      <h1 className="font-extrabold"> Use Effect Challenge </h1>
-      <p> Count: {count} </p>
+      <h1 className="font-extrabold  text-white"> Use Effect Challenge </h1>
+      <p className="text-white"> Count: {count} </p>
 
-      <button className="bg-green-600 px-4 py-3 rounded"> Increment </button>
+      <button className="bg-green-600 px-4 py-3 rounded text-white"> Increment </button>
 
-      <p> Name: </p>
+      <p className="text-white"> Name: </p>
 
-      <input className="border border-"/>
+      <input className="bg-white px-4 py-3 rounded"/>
     </div>
   )
 }
