@@ -1,15 +1,17 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const HowNotToFetchApi = () => {
 const [apiData, setApiData] = useState([])
 
 
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    useEffect(() => {
+        fetch("https://jsonplaceholder.typicode.com/posts")
         .then((res) => res.json())
         .then((data) => {
-            // setApiData(data)
+            setApiData(data)
         })
         .catch((err) => console.log(err))
+    }, [])
 
 
     return (
