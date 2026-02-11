@@ -5,9 +5,12 @@ import { useEffect, useState } from "react"
 const UseEffectExample = () => {
     const [count, setCount] = useState(0)
 
-    setInterval(() => {
-        setCount(count + 1)
-    }, 1000)
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCount((prev) => prev + 1)
+        }, 1000)
+        return () => clearInterval(timer)
+    }, [])
 
 
 
