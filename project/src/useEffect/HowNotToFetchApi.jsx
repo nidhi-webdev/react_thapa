@@ -6,7 +6,9 @@ const [apiData, setApiData] = useState([])
 
     fetch("https://jsonplaceholder.typicode.com/posts")
         .then((res) => res.json())
-        .then((data) => setApiData(data))
+        .then((data) => {
+            // setApiData(data)
+        })
         .catch((err) => console.log(err))
 
 
