@@ -5,13 +5,15 @@ import { useEffect, useState } from "react"
 const UseEffectExample = () => {
     const [count, setCount] = useState(0)
 
+    setInterval(() => {
+        setCount(count + 1)
+    }, 1000)
 
 
-    
 
     return (
 
-        <div className="flex justify-center items-center min-h-screen flex-col gap-y-4 bg-[#061935]">
+        <div className="flex justify-center items-center min-h-screen flex-col gap-y-4 bg-[#061935] font-2xl">
 
             <h1 className="font-medium text-white text-2xl"> Use Effect Example </h1>
             <p className="text-white"> My Subscribers on Youtube </p>
