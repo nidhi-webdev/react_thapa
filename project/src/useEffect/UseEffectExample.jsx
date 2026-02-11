@@ -4,32 +4,20 @@ import { useEffect, useState } from "react"
 
 const UseEffectExample = () => {
     const [count, setCount] = useState(0)
-    const [name, setName] = useState("")
 
 
-    useEffect(() => {
-        document.title = `Count: ${count}`
-    }, [count])
 
-   useEffect(() => {
-    console.log("The User Typed Value:", name)
-   }, [name])
     
 
     return (
 
         <div className="flex justify-center items-center min-h-screen flex-col gap-y-4 bg-[#061935]">
 
-            <h1 className="font-medium text-white text-2xl"> Use Effect Challenge </h1>
-            <p className="text-white"> Count: {count} </p>
+            <h1 className="font-medium text-white text-2xl"> Use Effect Example </h1>
+            <p className="text-white"> My Subscribers on Youtube </p>
+            <div className="text-white">  {count} </div>
+            <h3 className="text-white"> Subscribers <br /> Realtime Counter </h3>
 
-            <button onClick={() => setCount(count + 1)}
-                className="bg-green-600 px-4 py-3 rounded text-white cursor-pointer"> Increment </button>
-
-            <p className="text-white"> Name: {name}  </p>
-
-            <input value={name} onChange={(e) => setName(e.target.value)}
-            className="bg-white px-4 py-3 rounded" />
         </div>
     )
 }
