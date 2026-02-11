@@ -12,6 +12,7 @@ import LoginForm from './useState/LoginForm'
 import ContactForm from './useState/ContactForm'
 import Example from './useEffect/Example'
 import UseEffectExample from './useEffect/UseEffectExample'
+import HowNotToFetchApi from './useEffect/HowNotToFetchApi'
 
 
 const App = () => {
@@ -41,7 +42,9 @@ const App = () => {
       {/* <LoginForm /> */}
       {/* <ContactForm /> */}
       {/* <Example /> */}
-      <UseEffectExample />
+      {/* <UseEffectExample /> */}
+
+      <HowNotToFetchApi />
     </>
   )
 }
