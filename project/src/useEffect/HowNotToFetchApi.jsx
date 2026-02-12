@@ -3,7 +3,9 @@ import { useEffect, useState } from "react"
 const HowNotToFetchApi = () => {
     const [apiData, setApiData] = useState([])
 
-    const API = "https://pokeapi.co/api/v2/pokemon/pikachu"
+    console.log(apiData)
+
+    const API = "https://pokeapi.co/api/v2/pokemon/squirtle"
 
     const fetchPokemon = () => {
         fetch(API)
@@ -35,7 +37,10 @@ const HowNotToFetchApi = () => {
                 >
                     <ellipse cx="200" cy="60" rx="190" ry="50" fill="#eafcf3" />
                 </svg>
-                {/* You can add Pokémon image or info here */}
+                <img className="relative z-10"
+                src= {apiData.sprites?.other?.dream_world?.front_default} alt="pokemon-img" />
+                <h1> {apiData.name} </h1>
+               
             </div>
         </div>
     )
