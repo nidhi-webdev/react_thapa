@@ -5,7 +5,7 @@ const HowNotToFetchApi = () => {
 
     console.log(pokemon)
 
-    const API = "https://pokeapi.co/api/v2/pokemon/squirtle"
+    const API = "https://pokeapi.co/api/v2/pokemon/pikachu"
 
     const fetchPokemon = () => {
         fetch(API)
