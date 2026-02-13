@@ -55,15 +55,15 @@ const HowNotToFetchApi = () => {
                 <img className="relative z-10"
                     src={pokemon.sprites?.other?.dream_world?.front_default} alt="pokemon-img" />
                 <h1 className="text-5xl font-extrabold text-black text-center capitalize mt-4"> {pokemon.name} </h1>
-                <div>
-                    <p>
+                <div className="flex flex-row justify-center items-center gap-12 mt-6 w-full">
+                    <p className="text-lg text-gray-700" >
                         Height: <span>{pokemon.height} </span>
                     </p>
-                    <p>
+                    <p className="text-lg text-gray-700">
                         Weight: <span>{pokemon.weight} </span>
                     </p>
-                    <p>
-                        Weight: <span>{pokemon.stats[5].base_stat} </span>
+                    <p className="text-lg text-gray-700">
+                        Speed: <span>{pokemon.stats[5].base_stat} </span>
                     </p>
                 </div>
             </div>
