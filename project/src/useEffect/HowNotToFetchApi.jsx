@@ -3,10 +3,11 @@ import { useEffect, useState } from "react"
 const HowNotToFetchApi = () => {
     const [pokemon, setPokemon] = useState([])
     const [loading, setLoading] = useState(true)
+    const [error, setError] = useState("")
 
     console.log(pokemon)
 
-    const API = "https://pokeapi.co/api/v2/pokemon/pikachu"
+    const API = "https://pokeapi.co/api/v2/pokemons/pikachu"
 
     const fetchPokemon = () => {
         fetch(API)
@@ -15,8 +16,9 @@ const HowNotToFetchApi = () => {
                 setPokemon(data)
                 setLoading(false)
             })
-            .catch((err) => {
-                console.log(err)
+            .catch((error) => {
+                console.log(error)
+                setError(error)
                 setLoading(false)
             })
     }
@@ -27,6 +29,10 @@ const HowNotToFetchApi = () => {
 
     if (loading) {
         return <h1 className="font-bold "> Loading... </h1>
+    }
+
+    if(error) {
+        return <h1> Error: {error.message} </h1>
     }
 
 
