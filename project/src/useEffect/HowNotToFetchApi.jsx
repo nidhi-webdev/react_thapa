@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 
 const HowNotToFetchApi = () => {
     const [pokemon, setPokemon] = useState([])
+    const [loading, setLoading] = useState(true)
 
     console.log(pokemon)
 
@@ -12,15 +13,19 @@ const HowNotToFetchApi = () => {
             .then((res) => res.json())
             .then((data) => {
                 setPokemon(data)
+                setLoading(false)
             })
-            .catch((err) => console.log(err))
+            .catch((err) => {
+                console.log(err)
+                setLoading(false)
+            })
     }
 
     useEffect(() => {
         fetchPokemon()
     }, [])
 
-    if (!pokemon) {
+    if (loading) {
         return <h1 className="font-bold "> Loading... </h1>
     }
 
