@@ -3,11 +3,11 @@ import { useEffect, useState } from "react"
 const HowNotToFetchApi = () => {
     const [pokemon, setPokemon] = useState([])
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState("")
+    const [error, setError] = useState(null)
 
     console.log(pokemon)
 
-    const API = "https://pokeapi.co/api/v2/pokemons/pikachu"
+    const API = "https://pokeapi.co/api/v2/pokemon/pikachu"
 
     const fetchPokemon = () => {
         fetch(API)
@@ -31,7 +31,7 @@ const HowNotToFetchApi = () => {
         return <h1 className="font-bold "> Loading... </h1>
     }
 
-    if(error) {
+    if (error) {
         return <h1> Error: {error.message} </h1>
     }
 
@@ -55,6 +55,17 @@ const HowNotToFetchApi = () => {
                 <img className="relative z-10"
                     src={pokemon.sprites?.other?.dream_world?.front_default} alt="pokemon-img" />
                 <h1 className="text-5xl font-extrabold text-black text-center capitalize mt-4"> {pokemon.name} </h1>
+                <div>
+                    <p>
+                        Height: <span>{pokemon.height} </span>
+                    </p>
+                    <p>
+                        Weight: <span>{pokemon.weight} </span>
+                    </p>
+                    <p>
+                        Weight: <span>{pokemon.stats[5].base_stat} </span>
+                    </p>
+                </div>
             </div>
 
         </div>
